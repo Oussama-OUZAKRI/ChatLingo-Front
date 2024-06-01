@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#side-bar {
+    background-color: rgb(240, 240, 240);
+    width: 25%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -25%;
+    transition: left 0.3s;
+}
+
+#side-bar.open {
+    left: 0;
+}
+
+#open-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+#open-btn:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+#side-bar ion-icon:first-child {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#side-bar ion-icon:first-child:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+#side-bar h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    padding: 20px;
+    padding-top: 50px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 10px 20px;
+    border-radius: 15px;
+}
+
+.nav-item ion-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.nav-item a {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+    flex-grow: 1;
+}
+
+.nav-item:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+#home {
+    width: 100vw;
+    padding: 20px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: width 0.3s;
+}
+
+#home div:first-child {
+    display: flex;
+    flex-direction: row;
+    row-gap: 20px;
+    margin: auto;
+}
+
+#chat-box {
+    position: relative;
+    background-color: rgb(240, 240, 240);
+    width: 70%;
+    height: 40px;
+    border-radius: 20px;
+    margin: auto;
+}
+
+#chat-box input {
+    background-color: transparent;
+    width: 90%;
+    height: 40px;
+    padding: 10px;
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    border: none;
+}
+
+#chat-box input:focus {
+    outline: none;
+}
+
+#chat-box ion-icon {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#home ion-icon:hover {
+    color: red;
+}
+
+#recording-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#voice-recorder {
+    display: flex;
+    flex-direction: column;
+}
+
+#audio-visualizer {
+    width: 500px;
+    flex-grow: 1;
+    height: 40px;
+    background-color: #fff;
+    border-bottom: 2px solid red;
+}
+
+#voice-record-btn {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(240, 240, 240);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#voice-record-btn ion-icon {
+    font-size: 24px;
+}
+
+#voice-record-btn.active {
+    background-color: red; /* Exemple de style d'enregistrement actif */
+    animation: recording 1s infinite; /* Exemple d'animation pour l'état d'enregistrement */
+}
+
+#voice-record-btn.active ion-icon:hover {
+    color: #fff;
+}
+
+/* Exemple d'animation de battement pour l'état d'enregistrement */
+@keyframes recording {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+#timer {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    color: rgb(100, 100, 100);
+    margin-left: 10px;
+}
+
+#home p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    color: rgb(100, 100, 100);
+}

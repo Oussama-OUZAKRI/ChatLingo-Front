@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatLingo</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <div id="open-btn">
+        <ion-icon name="chevron-forward"></ion-icon>
+    </div>
+    <div id="side-bar">
+        <ion-icon name="close"></ion-icon>
+        <h1>Navigation</h1>
+        <div class="nav-item">
+            <a href="#">Home</a>
+            <ion-icon name="home"></ion-icon>
+        </div>
+        <div class="nav-item">
+            <a href="#">About us</a>
+            <ion-icon name="people-circle-outline"></ion-icon>
+        </div>
+        <div class="nav-item">
+            <a href="#">Contact us</a>
+            <ion-icon name="at-circle"></ion-icon>
+        </div>
+        <div class="nav-item">
+            <a href="#">Help</a>
+            <ion-icon name="information-circle"></ion-icon>
+        </div>
+    </div>
+    <div id="main">
+        <div id="home">
+            <div>
+                <div id="chat-box">
+                    <input type="text" placeholder="Say something to ChatLingo" required>
+                    <ion-icon name="arrow-up-circle-outline"></ion-icon>
+                </div>
+            </div>
+            <div id="recording-section">
+                <button id="voice-record-btn">
+                    <ion-icon name="mic"></ion-icon>
+                </button>
+                <div id="voice-recorder">
+                    <canvas id="audio-visualizer"></canvas>
+                    <p id="timer">00:00</p>
+                </div>
+            </div>
+            <p>ChatLingo is your friendly and intelligent language learning companion.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
